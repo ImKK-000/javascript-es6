@@ -4,6 +4,8 @@ const sumOddDataFromEvenData = data
   .map(value => value + 1)
   .reduce((previousNumber, value) => previousNumber + value)
 
+
+
 const objectData = [
   {
     values: [0, 0]
@@ -13,4 +15,15 @@ const objectData = [
   }
 ]
 const pluckObjectData = objectData.map(({ values }) => values)
-console.log(pluckObjectData)
+
+
+
+
+const name1 = 'foo', name2 = 'bar'
+console.log({
+  name1,
+  name2,
+  [name1]: 'isName1',
+  [name2]: 'isName2',
+  [name1]: 'isName1?' // override!
+})
